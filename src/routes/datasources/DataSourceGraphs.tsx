@@ -166,7 +166,6 @@ export function DataSourceGraphs(props: DataSourceGraphsInterface) {
           </Grid>
           : <Grid item xs={12} lg={6}>
              <Box sx={{textAlign: 'center', mt: 10}}>No volatility data to show.</Box>
-             <Box sx={{textAlign: 'center'}}>Liquidity is computed using aggregated routes, no direct route to compute price related data</Box>
             </Grid>
             }
         </Grid>
