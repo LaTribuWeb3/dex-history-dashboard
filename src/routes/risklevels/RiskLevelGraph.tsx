@@ -74,7 +74,7 @@ export function RiskLevelGraphs(props: RiskLevelGraphsInterface) {
           for (const morphoParameter of props.parameters) {
             if (morphoParameter.visible) {
               const liquidationBonus = morphoParameter.bonus;
-              const liquidity = blockData.avgSlippageMap[liquidationBonus].base;
+              const liquidity = blockData.avgSlippageMap[liquidationBonus];
               if (liquidity <= 0) {
                 continue;
               }
@@ -159,7 +159,7 @@ export function RiskLevelGraphs(props: RiskLevelGraphsInterface) {
               leftAxisSeries={[
                 {
                   label: `${props.pair.base} liquidity for 5% slippage`,
-                  data: Object.values(liquidityData.liquidity).map((_) => _.avgSlippageMap[500].base),
+                  data: Object.values(liquidityData.liquidity).map((_) => _.avgSlippageMap[500]),
                   formatter: FriendlyFormatNumber
                 }
               ]}

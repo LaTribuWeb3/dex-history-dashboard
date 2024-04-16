@@ -12,6 +12,6 @@ export interface DataAtBlock {
   priceMin: number;
   priceMax: number;
   priceMedian: number;
-  avgSlippageMap: { [slippageBps: number]: { base: number; quote: number } };
+  avgSlippageMap: { [slippageBps: number]: number };
   volatility: number;
 }
